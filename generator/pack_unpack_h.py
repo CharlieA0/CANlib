@@ -41,4 +41,6 @@ def write(can, output_path=can_lib_h_path):
                 frame_handler(msg, bus.name, write_declare, fw)
                 fw('\n\n')
 
+        fw('void to_bitstring(uint8_t in[], uint64_t *out);\n')
+
         fw(endif(header_name))
