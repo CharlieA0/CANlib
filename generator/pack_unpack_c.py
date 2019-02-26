@@ -8,7 +8,7 @@ from common import pack_unpack_c_path, pack_unpack_c_base_path, coord, is_multpl
 
 
 def swap_endianness_fn(type: Type):
-    if type.isbool():
+    if type.isbool() or type.endswith('8'):
         return ''
 
     return 'swap_' + type.type
